@@ -1,13 +1,9 @@
 workflows:
   flutter-apk-release:
-    name: Flutter Android Release Build
+    name: Flutter APK Build (No Signing)
     max_build_duration: 60
     environment:
       flutter: stable
-      android_signing:
-        - keystore_reference
-      vars:
-        PACKAGE_NAME: "com.realmoney.game"
     scripts:
       - name: Install dependencies
         script: |
