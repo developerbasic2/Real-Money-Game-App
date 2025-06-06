@@ -1,0 +1,8 @@
+defaultConfig {
+    applicationId "com.realmoney.game"
+    minSdkVersion 21
+    targetSdkVersion 33
+    versionCode 1
+    versionName "1.0.0"
+    multiDexEnabled true
+}
