@@ -1,19 +1,16 @@
 workflows:
   flutter-apk-release:
-    name: Flutter APK Build (No Signing)
+    name: Flutter APK Build (Firebase + No Keystore)
     max_build_duration: 60
     environment:
       flutter: stable
     scripts:
-      - name: Install dependencies
+      - name: Clean and get dependencies
         script: |
+          flutter clean
           flutter pub get
       - name: Build APK
         script: |
           flutter build apk --release
     artifacts:
       - build/app/outputs/flutter-apk/app-release.apk
-    publishing:
-      email:
-        recipients:
-          - hazratali.0007860@gmail.com
