@@ -6,3 +6,7 @@ defaultConfig {
     versionName "1.0.0"
     multiDexEnabled true
 }
+dependencies {
+    classpath 'com.google.gms:google-services:4.3.15'
+}
+apply plugin: 'com.google.gms.google-services'
